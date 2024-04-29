@@ -1,0 +1,79 @@
+USE [BooksMangement]
+GO
+
+-- Enable identity insert for BookCategories table
+SET IDENTITY_INSERT [dbo].[BookCategories] ON 
+
+-- Inserting categories
+INSERT [dbo].[BookCategories] ([Id], [Category], [SubCategory]) VALUES (8, N'Fiction', N'Historical Fiction')
+INSERT [dbo].[BookCategories] ([Id], [Category], [SubCategory]) VALUES (9, N'Fiction', N'Science Fiction')
+INSERT [dbo].[BookCategories] ([Id], [Category], [SubCategory]) VALUES (10, N'Romance', N'Contemporary Romance')
+INSERT [dbo].[BookCategories] ([Id], [Category], [SubCategory]) VALUES (11, N'Romance', N'Fantasy Romance')
+INSERT [dbo].[BookCategories] ([Id], [Category], [SubCategory]) VALUES (12, N'Mystery', N'Detective Stories')
+INSERT [dbo].[BookCategories] ([Id], [Category], [SubCategory]) VALUES (13, N'Mystery', N'Thriller')
+INSERT [dbo].[BookCategories] ([Id], [Category], [SubCategory]) VALUES (14, N'Young Adult', N'Dystopian')
+
+-- Disable identity insert for BookCategories table
+SET IDENTITY_INSERT [dbo].[BookCategories] OFF
+GO
+
+-- Enable identity insert for Books table
+SET IDENTITY_INSERT [dbo].[Books] ON 
+
+-- Inserting books
+
+-- Fiction Books
+INSERT [dbo].[Books] ([Id], [Title], [Author], [Price], [Ordered], [CategoryId]) VALUES (8, N'The Nightingale', N'Kristin Hannah', 600, 0, 8)
+INSERT [dbo].[Books] ([Id], [Title], [Author], [Price], [Ordered], [CategoryId]) VALUES (9, N'Dune', N'Frank Herbert', 800, 0, 9)
+-- Add more Fiction books here...
+INSERT [dbo].[Books] ([Id], [Title], [Author], [Price], [Ordered], [CategoryId]) VALUES (10, N'To Kill a Mockingbird', N'Harper Lee', 550, 0, 8)
+INSERT [dbo].[Books] ([Id], [Title], [Author], [Price], [Ordered], [CategoryId]) VALUES (11, N'The Great Gatsby', N'F. Scott Fitzgerald', 650, 0, 8)
+INSERT [dbo].[Books] ([Id], [Title], [Author], [Price], [Ordered], [CategoryId]) VALUES (12, N'Brave New World', N'Aldous Huxley', 700, 0, 9)
+INSERT [dbo].[Books] ([Id], [Title], [Author], [Price], [Ordered], [CategoryId]) VALUES (13, N'1984', N'George Orwell', 750, 0, 9)
+INSERT [dbo].[Books] ([Id], [Title], [Author], [Price], [Ordered], [CategoryId]) VALUES (14, N'The Hobbit', N'J.R.R. Tolkien', 850, 0, 9)
+INSERT [dbo].[Books] ([Id], [Title], [Author], [Price], [Ordered], [CategoryId]) VALUES (15, N'Harry Potter and the Sorcerer''s Stone', N'J.K. Rowling', 900, 0, 9)
+INSERT [dbo].[Books] ([Id], [Title], [Author], [Price], [Ordered], [CategoryId]) VALUES (16, N'Fahrenheit 451', N'Ray Bradbury', 750, 0, 8)
+INSERT [dbo].[Books] ([Id], [Title], [Author], [Price], [Ordered], [CategoryId]) VALUES (17, N'Animal Farm', N'George Orwell', 600, 0, 8)
+
+-- Romance Books
+INSERT [dbo].[Books] ([Id], [Title], [Author], [Price], [Ordered], [CategoryId]) VALUES (18, N'The Notebook', N'Nicholas Sparks', 500, 0, 10)
+INSERT [dbo].[Books] ([Id], [Title], [Author], [Price], [Ordered], [CategoryId]) VALUES (19, N'A Court of Thorns and Roses', N'Sarah J. Maas', 700, 0, 11)
+-- Add more Romance books here...
+INSERT [dbo].[Books] ([Id], [Title], [Author], [Price], [Ordered], [CategoryId]) VALUES (20, N'Pride and Prejudice', N'Jane Austen', 550, 0, 10)
+INSERT [dbo].[Books] ([Id], [Title], [Author], [Price], [Ordered], [CategoryId]) VALUES (21, N'Twilight', N'Stephenie Meyer', 600, 0, 10)
+INSERT [dbo].[Books] ([Id], [Title], [Author], [Price], [Ordered], [CategoryId]) VALUES (22, N'The Fault in Our Stars', N'John Green', 650, 0, 10)
+INSERT [dbo].[Books] ([Id], [Title], [Author], [Price], [Ordered], [CategoryId]) VALUES (23, N'Me Before You', N'Jojo Moyes', 700, 0, 11)
+INSERT [dbo].[Books] ([Id], [Title], [Author], [Price], [Ordered], [CategoryId]) VALUES (24, N'The Princess Bride', N'William Goldman', 600, 0, 11)
+INSERT [dbo].[Books] ([Id], [Title], [Author], [Price], [Ordered], [CategoryId]) VALUES (25, N'Outlander', N'Diana Gabaldon', 800, 0, 11)
+INSERT [dbo].[Books] ([Id], [Title], [Author], [Price], [Ordered], [CategoryId]) VALUES (26, N'Meet Me in London', N'Georgia Toffolo', 550, 0, 10)
+INSERT [dbo].[Books] ([Id], [Title], [Author], [Price], [Ordered], [CategoryId]) VALUES (27, N'Anna Karenina', N'Leo Tolstoy', 750, 0, 10)
+
+-- Mystery Books
+INSERT [dbo].[Books] ([Id], [Title], [Author], [Price], [Ordered], [CategoryId]) VALUES (28, N'Sherlock Holmes', N'Arthur Conan Doyle', 500, 0, 12)
+INSERT [dbo].[Books] ([Id], [Title], [Author], [Price], [Ordered], [CategoryId]) VALUES (29, N'The Girl with the Dragon Tattoo', N'Stieg Larsson', 650, 0, 13)
+-- Add more Mystery books here...
+INSERT [dbo].[Books] ([Id], [Title], [Author], [Price], [Ordered], [CategoryId]) VALUES (30, N'The Da Vinci Code', N'Dan Brown', 600, 0, 12)
+INSERT [dbo].[Books] ([Id], [Title], [Author], [Price], [Ordered], [CategoryId]) VALUES (31, N'Gone Girl', N'Gillian Flynn', 700, 0, 13)
+INSERT [dbo].[Books] ([Id], [Title], [Author], [Price], [Ordered], [CategoryId]) VALUES (32, N'And Then There Were None', N'Agatha Christie', 550, 0, 12)
+INSERT [dbo].[Books] ([Id], [Title], [Author], [Price], [Ordered], [CategoryId]) VALUES (33, N'The Silent Patient', N'Alex Michaelides', 800, 0, 13)
+INSERT [dbo].[Books] ([Id], [Title], [Author], [Price], [Ordered], [CategoryId]) VALUES (34, N'The Girl on the Train', N'Paula Hawkins', 600, 0, 12)
+INSERT [dbo].[Books] ([Id], [Title], [Author], [Price], [Ordered], [CategoryId]) VALUES (35, N'In the Woods', N'Tana French', 650, 0, 13)
+INSERT [dbo].[Books] ([Id], [Title], [Author], [Price], [Ordered], [CategoryId]) VALUES (36, N'The Cuckoo''s Calling', N'Robert Galbraith', 700, 0, 12)
+INSERT [dbo].[Books] ([Id], [Title], [Author], [Price], [Ordered], [CategoryId]) VALUES (37, N'The Hound of the Baskervilles', N'Arthur Conan Doyle', 550, 0, 12)
+
+-- Young Adult Books
+INSERT [dbo].[Books] ([Id], [Title], [Author], [Price], [Ordered], [CategoryId]) VALUES (38, N'The Hunger Games', N'Suzanne Collins', 550, 0, 14)
+-- Add more Young Adult books here...
+INSERT [dbo].[Books] ([Id], [Title], [Author], [Price], [Ordered], [CategoryId]) VALUES (39, N'Divergent', N'Veronica Roth', 600, 0, 14)
+INSERT [dbo].[Books] ([Id], [Title], [Author], [Price], [Ordered], [CategoryId]) VALUES (40, N'The Maze Runner', N'James Dashner', 650, 0, 14)
+INSERT [dbo].[Books] ([Id], [Title], [Author], [Price], [Ordered], [CategoryId]) VALUES (41, N'Twilight', N'Stephenie Meyer', 600, 0, 14)
+INSERT [dbo].[Books] ([Id], [Title], [Author], [Price], [Ordered], [CategoryId]) VALUES (42, N'The Fault in Our Stars', N'John Green', 650, 0, 14)
+INSERT [dbo].[Books] ([Id], [Title], [Author], [Price], [Ordered], [CategoryId]) VALUES (43, N'The Giver', N'Lois Lowry', 550, 0, 14)
+INSERT [dbo].[Books] ([Id], [Title], [Author], [Price], [Ordered], [CategoryId]) VALUES (44, N'To All the Boys I''ve Loved Before', N'Jenny Han', 600, 0, 14)
+INSERT [dbo].[Books] ([Id], [Title], [Author], [Price], [Ordered], [CategoryId]) VALUES (45, N'Percy Jackson & the Olympians', N'Rick Riordan', 700, 0, 14)
+INSERT [dbo].[Books] ([Id], [Title], [Author], [Price], [Ordered], [CategoryId]) VALUES (46, N'The Lightning Thief', N'Rick Riordan', 550, 0, 14)
+INSERT [dbo].[Books] ([Id], [Title], [Author], [Price], [Ordered], [CategoryId]) VALUES (47, N'The Hunger Games', N'Suzanne Collins', 550, 0, 14)
+
+-- Disable identity insert for Books table
+SET IDENTITY_INSERT [dbo].[Books] OFF
+GO
